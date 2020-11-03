@@ -17,10 +17,12 @@ async function run() {
                     email VARCHAR(256) NOT NULL,
                     hash VARCHAR(512) NOT NULL
                 );           
-                CREATE TABLE animals (
+                CREATE TABLE snowboards (
                     id SERIAL PRIMARY KEY NOT NULL,
-                    name VARCHAR(512) NOT NULL,
-                    cool_factor INTEGER NOT NULL,
+                    snowboard_name VARCHAR(512) NOT NULL,
+                    flex INTEGER NOT NULL,
+                    is_all_mountain BOOLEAN NOT NULL,
+                    brand VARCHAR(512) NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id)
             );
         `);

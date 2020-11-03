@@ -13,7 +13,7 @@ async function run() {
             DROP TABLE IF EXISTS snowboards;
         `);
 
-    console.log(' drop tables complete', getEmoji(), getEmoji(), getEmoji());
+    console.log('drop tables complete', getEmoji(), getEmoji(), getEmoji());
   }
   catch(err) {
     console.log(err);

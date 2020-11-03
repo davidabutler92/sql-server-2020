@@ -27,10 +27,10 @@ async function run() {
     await Promise.all(
       snowboards.map(snowboard => {
         return client.query(`
-                    INSERT INTO snowboards (snowboard_name, flex, brand, owner_id)
-                    VALUES ($1, $2, $3, $4);
+                    INSERT INTO snowboards (snowboard_name, flex, is_all_mountain, brand, owner_id)
+                    VALUES ($1, $2, $3, $4, $5);
                 `,
-        [snowboard.snowboard_name, snowboard.flex, snowboard.brand, user.id]);
+        [snowboard.snowboard_name, snowboard.flex, snowboard.is_all_mountain, snowboard.brand, user.id]);
       })
     );
     
