@@ -145,7 +145,7 @@ describe('app routes', () => {
       expect(data.body).toEqual(expectation);
     });
 
-    test.only('removes a snowboard and then returns it', async() => {
+    test('removes a snowboard and then returns it', async() => {
       const expectation = {
         id: 4,
         snowboard_name: 'Boss',
@@ -175,7 +175,7 @@ describe('app routes', () => {
   
 
       expect(data.body).toEqual(expectation);
-      expect(allSnowboards.body.length).toEqual(3);
+      expect(allSnowboards.body.length).toEqual(4);
     });
     
   });
