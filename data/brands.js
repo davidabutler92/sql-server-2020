@@ -6,7 +6,7 @@ module.exports = [
     name: 'Lib Tech',
   },
   {
-    name: 'Lib Tech',
+    name: 'Burton',
   },
   {
     name: 'Bataleon',

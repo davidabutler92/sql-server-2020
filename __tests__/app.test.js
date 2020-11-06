@@ -46,7 +46,7 @@ describe('app routes', () => {
           'snowboard_name': 'T. Rice Orca',
           'flex': 7,
           'is_all_mountain': true,
-          'brand': 'Lib Tech',
+          'brand': 'Burton',
           'owner_id': 1
         },
         {
