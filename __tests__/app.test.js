@@ -34,37 +34,37 @@ describe('app routes', () => {
     test('returns snowboards', async() => {
       const expectation = [
         {
-          id: 1,
-          snowboard_name: 'Defenders of Awesome',
-          flex: 5,
-          is_all_mountain: true,
-          owner_id: 1,
-          brand: 'Capita',
+          'id': 2,
+          'snowboard_name': 'Brew C2',
+          'flex': 7,
+          'is_all_mountain': true,
+          'brand': 'Lib Tech',
+          'owner_id': 1
         },
         {
-          id: 2,
-          snowboard_name: 'Brew C2',
-          flex: 7,
-          is_all_mountain: true,
-          owner_id: 1,
-          brand: 'Lib Tech',
+          'id': 3,
+          'snowboard_name': 'T. Rice Orca',
+          'flex': 7,
+          'is_all_mountain': true,
+          'brand': 'Lib Tech',
+          'owner_id': 1
         },
         {
-          id: 3,
-          snowboard_name: 'T. Rice Orca',
-          flex: 7,
-          is_all_mountain: true,
-          owner_id: 1,
-          brand: 'Lib Tech',
+          'id': 1,
+          'snowboard_name': 'Defenders of Awesome',
+          'flex': 5,
+          'is_all_mountain': true,
+          'brand': 'Capita',
+          'owner_id': 1
         },
         {
-          id: 4,
-          snowboard_name: 'Boss',
-          flex: 4,
-          is_all_mountain: false,
-          owner_id: 1,
-          brand: 'Bataleon',
-        },
+          'id': 4,
+          'snowboard_name': 'Boss',
+          'flex': 4,
+          'is_all_mountain': false,
+          'brand': 'Bataleon',
+          'owner_id': 1
+        }
       ];
 
       const data = await fakeRequest(app)
@@ -100,18 +100,17 @@ describe('app routes', () => {
         flex: 2,
         is_all_mountain: true,
         owner_id: 1,
-        brand: 'Burton',
+        brand_id: 2,
       };
   
       const data = await fakeRequest(app)
         .post('/snowboards')
         .send({
-          id: 5,
           snowboard_name: 'Process',
           flex: 2,
           is_all_mountain: true,
           owner_id: 1,
-          brand: 'Burton',
+          brand_id: 2,
         })
         .expect('Content-Type', /json/)
         .expect(200);
@@ -132,7 +131,7 @@ describe('app routes', () => {
         snowboard_name: 'Wake',
         flex: 2,
         is_all_mountain: true,
-        brand: 'Burton',
+        brand_id: 1,
         owner_id: 1,
       };
 
@@ -152,7 +151,7 @@ describe('app routes', () => {
         flex: 4,
         is_all_mountain: false,
         owner_id: 1,
-        brand: 'Bataleon',
+        brand_id: 4,
       };
   
       const data = await fakeRequest(app)
@@ -163,7 +162,7 @@ describe('app routes', () => {
           flex: 4,
           is_all_mountain: false,
           owner_id: 1,
-          brand: 'Bataleon',
+          brand_id: 4,
         })
         .expect('Content-Type', /json/)
         .expect(200);

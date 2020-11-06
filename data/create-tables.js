@@ -16,13 +16,17 @@ async function run() {
                     id SERIAL PRIMARY KEY,
                     email VARCHAR(256) NOT NULL,
                     hash VARCHAR(512) NOT NULL
-                );           
+                );
+                CREATE TABLE brands (
+                  id SERIAL PRIMARY KEY,
+                  name VARCHAR(256) NOT NULL
+              );                      
                 CREATE TABLE snowboards (
                     id SERIAL PRIMARY KEY NOT NULL,
                     snowboard_name VARCHAR(512) NOT NULL,
                     flex INTEGER NOT NULL,
                     is_all_mountain BOOLEAN NOT NULL,
-                    brand VARCHAR(512) NOT NULL,
+                    brand_id INTEGER NOT NULL REFERENCES brands(id),
                     owner_id INTEGER NOT NULL REFERENCES users(id)
             );
         `);
